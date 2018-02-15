@@ -1,2 +1,2 @@
 # SCT-toolkit
-Analysis toolkit for the Prototype Schwarzschild-Couder Telescope
+Analysis toolkit for the Prototype Schwarzschild-Couder Telescope. Work in progress...
