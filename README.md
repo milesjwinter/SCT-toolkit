@@ -2,12 +2,12 @@
 
 Analysis toolkit for the Prototype Schwarzschild-Couder Telescope ([pSCT](http://cta-psct.physics.ucla.edu/)). The SCT Toolkit is a collection of analysis tools with the following major components:
 
-- Pedestal: construct pedestal databases from calibration data
-- Quick Plots: easily create plots to view raw and reconstructed data
-- Utils: utilities for viewing and buidling documentation
-- Waveform: access raw and calibrated waveform data, apply pedestal subtraction
-- Analysis: convenience tools for calculating standard metrics such as charge spectrums (work in progress)
-- Interactive: create interactive plots that can be viewed in html (work in progress, see [here](https://github.com/milesjwinter/Interactive-Heatmap))
+- [Pedestal](https://github.com/milesjwinter/SCT-toolkit/blob/master/sct_toolkit/pedestal.py): construct pedestal databases from calibration data
+- [Quick Plots](https://github.com/milesjwinter/SCT-toolkit/blob/master/sct_toolkit/quick_plots.py): easily create plots to view raw and reconstructed data
+- [Utils](https://github.com/milesjwinter/SCT-toolkit/blob/master/sct_toolkit/utils.py): utilities for viewing and buidling documentation
+- [Waveform](https://github.com/milesjwinter/SCT-toolkit/blob/master/sct_toolkit/waveform.py): access raw and calibrated waveform data, apply pedestal subtraction
+- [Analysis](https://github.com/milesjwinter/SCT-toolkit/blob/master/sct_toolkit/analysis.py): convenience tools for calculating standard metrics such as charge spectrums (work in progress)
+- [Interactive](https://github.com/milesjwinter/SCT-toolkit/blob/master/sct_toolkit/interactive.py): create interactive plots that can be viewed in html (work in progress, see [here](https://github.com/milesjwinter/Interactive-Heatmap))
 
 The toolkit is designed to take `.fits` files and convert them into a more analysis friendly format. The process begins with the construction of a pedestal and waveform databases. A run number and a list of modules are specified, then an hdf5 database, along with corresponding metadata, is generated as output. New databases can be created with a few short commands:
 
