@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-import os
+import os, sys
 import imp
 
 class docs(object):
@@ -24,7 +24,13 @@ class docs(object):
 
     def _show_docs(self):
         """ Launch documentation in web browser """
-        os.system('open {}'.format(self.source_path))
+        try:
+            if sys.platform == 'darwin':
+                os.system('open {}'.format(self.source_path))
+            else:
+                os.system('open-xdg {}'.format(self.source_path))
+        except IOError:
+            raise IOError("documentation file '{}' could not be opened".format(self.source_path))
 
     def _update_docs(self):
         """ Rebuild documentation """
